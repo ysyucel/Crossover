@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject menuButtons;
     [SerializeField] GameObject menuButtonsComingSoon;
     [SerializeField] GameObject menuButtonsComingSoonText;
+    [SerializeField] GameObject menuStack;
+    int currentCameraIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +40,29 @@ public class UIManager : MonoBehaviour
         connectionLostPopUp.SetActive(false);
     }
     public void OpenTestMyStackMenu () {
-
+        menuStack.SetActive(true);
     }
     public void CloseTestMyStackMenu () {
 
+        menuStack.SetActive(false);
     }
     //buttons functions
     public void ButtonClickTestMyStack () {
         gm.ButtonClickTestMyStack();
+    }
+    public void ButtonClickRight () {
+
+        currentCameraIndex++;
+        currentCameraIndex=Mathf.Clamp(currentCameraIndex, 0, 4);
+        gm.ChangeCameraTarget(currentCameraIndex);
+    }
+    public void ButtonClickLeft () {
+
+        currentCameraIndex--;
+        currentCameraIndex = Mathf.Clamp(currentCameraIndex, 0, 4);
+        gm.ChangeCameraTarget(currentCameraIndex);
+    }
+    public void ActivatePhysics () {
+        gm.ActivatePhysics();
     }
 }

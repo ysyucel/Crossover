@@ -39,6 +39,15 @@ public class GameManager : MonoBehaviour
         }
         testMyStackController.DataDownloaded();
     }
+    public void ChangeCameraTarget (int index) {
+        testMyStackController.NewCameraTarget(index);
+    }
+    public void StackReady () {
+        uiManager.OpenTestMyStackMenu();
+    }
+    public void ActivatePhysics () {
+        testMyStackController.ActivatePhysics();
+    }
 
-    
+
 }
