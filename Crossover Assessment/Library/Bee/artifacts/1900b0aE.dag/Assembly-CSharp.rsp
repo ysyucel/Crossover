@@ -373,7 +373,6 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/IPooledObject.cs"
 "Assets/Scripts/JengaPiece.cs"
-"Assets/Scripts/JengaPiece1.cs"
 "Assets/Scripts/Models.cs"
 "Assets/Scripts/MouseTouchControl.cs"
 "Assets/Scripts/ObjectPoolingMaster.cs"
